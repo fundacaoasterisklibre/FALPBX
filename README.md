@@ -1,24 +1,26 @@
-# README
+#  **FALPBX**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+## **Sistema administrativo** 
 
-* System dependencies
+## Criando Model User:
 
-* Configuration
+rails g model User name:string kind:integer status:integer notes:text
 
-* Database creation
+## Criando Model Queue:
 
-* Database initialization
+rails g model Callqueue
 
-* How to run the test suite
+## Criando Model Extension:
 
-* Services (job queues, cache servers, search engines, etc.)
+rails g model Extension
 
-* Deployment instructions
+## Criando Model Voicemailbox:
 
-* ...
+rails g model Voicemailbox
+
+## Criando Model Voicemail Message:
+
+rails g model Voicemailmessage
+
