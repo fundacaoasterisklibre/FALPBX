@@ -1,0 +1,31 @@
+<div class="ui text container">
+  <div class="ui segments">
+    <div class="ui segment">
+      <h2>Usuario</h2>
+
+      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'ui text large form'}) do |f| %>
+        <div class="field">
+          <%= f.input :email, required: false, autofocus: true, input_html: {autocomplete: "email", class: 'ui text large form'} %>
+        </div>
+
+      <div class="field">
+          <%= f.input :password, required: false, input_html: {autocomplete: "current-password", class: 'ui text large form sixteen'}, label: "Senha" %>
+        </div>
+
+        <div class="ui checkbox">
+          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+        </div>
+
+        <div class="actions">
+          <%= f.button :submit, "Entrar", class: 'ui fluid large teal submit button' %>
+        </div>
+        <% end %>
+
+    </div>
+  </div>
+
+  <div class="ui segment" style="text-align: center">
+
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
