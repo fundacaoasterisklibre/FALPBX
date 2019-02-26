@@ -1,16 +1,19 @@
-default: &default 
+default: &default
   adapter: postgresql
   encoding: unicode
+  host: db
   username: postgres
-  password: Numb3r33 
-development: 
+  password: postgres
+  pool: 5
+
+development:
   <<: *default
-  database: pbxfal_development
+  database: FALPBX_development
 test:
   <<: *default
-  database: pbxfal_test
-// production:
-//   <<: *default
-//   database: pbxfal_production
-//   username: pbxfal
-//   password: <%= ENV['CRYPTO_WALLET_DATABASE_PASSWORD'] %>
+  database: FALPBX_test
+production:
+  <<: *default
+  database: FALPBX_production
+  username: FALPBX
+  password: <%= ENV['FALPBX_DATABASE_PASSWORD'] %>

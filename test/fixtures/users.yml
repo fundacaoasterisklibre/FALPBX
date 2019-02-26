@@ -2,14 +2,12 @@
 
 one:
   name: MyString
-  mail: MyString
   kind: 1
   status: 1
   notes: MyText
 
 two:
   name: MyString
-  mail: MyString
   kind: 1
   status: 1
   notes: MyText
