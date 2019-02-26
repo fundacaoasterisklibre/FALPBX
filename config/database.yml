@@ -1,0 +1,16 @@
+default: &default 
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: Numb3r33 
+development: 
+  <<: *default
+  database: pbxfal_development
+test:
+  <<: *default
+  database: pbxfal_test
+// production:
+//   <<: *default
+//   database: pbxfal_production
+//   username: pbxfal
+//   password: <%= ENV['CRYPTO_WALLET_DATABASE_PASSWORD'] %>

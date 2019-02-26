@@ -1,0 +1,2 @@
+class Callqueue < ApplicationRecord
+end
