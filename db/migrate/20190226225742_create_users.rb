@@ -1,9 +1,8 @@
 class CreateUsers < ActiveRecord::Migration[5.2]
   def change
     create_table :users do |t|
-      t.boolean :admin
       t.string :name
-      #t.integer :kind
+      t.integer :kind
       t.integer :status
       t.text :notes
 
